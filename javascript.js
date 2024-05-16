@@ -84,7 +84,7 @@ function createBasicSquare(parent) {
   square.style.borderBottom = "1px solid black";
   parent.appendChild(square);
   square.addEventListener("mouseover", () => {
-    square.style.backgroundColor = "red";
+    square.style.backgroundColor = randomRgbColor();
   });
 }
 
@@ -97,7 +97,7 @@ function createLeftSideSquare(parent) {
   square.style.borderBottom = "1px solid black";
   parent.appendChild(square);
   square.addEventListener("mouseover", () => {
-    square.style.backgroundColor = "red";
+    square.style.backgroundColor = randomRgbColor();
   });
 }
 
@@ -110,7 +110,7 @@ function createTopSideSquare(parent) {
   square.style.borderBottom = "1px solid black";
   parent.appendChild(square);
   square.addEventListener("mouseover", () => {
-    square.style.backgroundColor = "red";
+    square.style.backgroundColor = randomRgbColor();
   });
 }
 
@@ -124,6 +124,15 @@ function createZeroSquare(parent) {
   square.style.borderBottom = "1px solid black";
   parent.appendChild(square);
   square.addEventListener("mouseover", () => {
-    square.style.backgroundColor = "red";
+    square.style.backgroundColor = randomRgbColor();
   });
+}
+
+function randomRgbColor() {
+  const randomRgbNumber = () => Math.floor(Math.random() * 255);
+  const r = randomRgbNumber();
+  const g = randomRgbNumber();
+  const b = randomRgbNumber();
+  const rgb = `rgb(${r},${g},${b})`;
+  return rgb;
 }
