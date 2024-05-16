@@ -1,5 +1,5 @@
 // start grid
-const oldContainer = document.querySelector("#webpage-container");
+const oldContainer = document.querySelector("#old-container");
 
 for (let i = 0; i < 256; i++) {
   if (i < 16) {
@@ -31,6 +31,9 @@ btnSize.addEventListener("click", () => {
         break;
       } else if (boxSize > 100) {
         alert("Limit is 100 squares per side");
+        continue;
+      } else if (isNaN(+boxSize)) {
+        alert("Wrong input");
         continue;
       } else {
         canceled = false;
