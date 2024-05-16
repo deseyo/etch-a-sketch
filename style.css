@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#webpage-container {
+  display: flex;
+  width: 256px;
+  flex-flow: row wrap;
+}
+
+#new-container {
+  display: flex;
+  flex-flow: row wrap;
+}
