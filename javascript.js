@@ -16,6 +16,7 @@ for (let i = 0; i < 256; i++) {
 }
 
 // new grid
+const webpageContent = document.querySelector("#webpage-content");
 const btnSize = document.querySelector("#btn-size");
 let newContainer;
 let boxSize;
@@ -55,7 +56,7 @@ btnSize.addEventListener("click", () => {
     newContainer = document.createElement("div");
     newContainer.style.width = `${boxSize * 16}px`;
     newContainer.setAttribute("id", "new-container")
-    document.body.appendChild(newContainer);
+    webpageContent.appendChild(newContainer);
 
     for (let i = 0; i < squaresNum; i++) {
       if (i < boxSize) {
