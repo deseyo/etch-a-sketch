@@ -33,7 +33,7 @@ btnSize.addEventListener("click", () => {
       } else if (boxSize > 100) {
         alert("Limit is 100 squares per side");
         continue;
-      } else if (isNaN(+boxSize)) {
+      } else if (isNaN(+boxSize) || boxSize.split("").filter(value => value != " ").length === 0) {
         alert("Wrong input");
         continue;
       } else {
